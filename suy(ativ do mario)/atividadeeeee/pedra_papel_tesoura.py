@@ -1,34 +1,34 @@
-
 import random
 
-print("~~ joguinho de pedra, papel e tesoura :3 ~~")
+print("🪻୧﹒𝐣𝐨𝐠𝐮𝐢𝐧𝐡𝐨 : pedra, papel e tesoura﹒⌗")
 lista = ['papel', 'pedra', 'tesoura']
-jogador_pontos = []
-maquina_pontos = []
-
+jogador_pontos = 0
+maquina_pontos = 0
 while True:
-    jogador_pontos = 0
-    maquina_pontos = 0
-    if jogador_pontos < 3 and maquina_pontos < 3 
 
-    jogador = input("Escolha sua mão: ").lower()
+    jogador = input(" ₊ ⊹ Escolha sua mão (˶˃ ᵕ ˂˶) !!  ✧˚. : ").lower().strip()
     if jogador not in lista:
-        print("Essa opção não existe, amigo.")
+        print("Essa opção não existe, amigo...(╥﹏╥)")
+        break
 
     maquina = random.choice(lista)
-    print("a maquina jogou: ",(maquina))
+    print("₊⊹ a maquina jogou: ",(maquina))
 
     if jogador == maquina:
-        print("deu empate :P")
+        print("deu empate ( ˶°ㅁ°) !!")
 
-    if (jogador == 'pedra' and maquina == 'tesoura') or \
-    (jogador == 'papel' and maquina == 'pedra') or \
-    (jogador == 'tesoura' and maquina == 'papel'):
-        jogador = jogador_pontos =+ 1
-        print(f"voce ganhouuuu 1 ponto :D. total --> {jogador}")
-
+    elif (jogador == 'pedra' and maquina == 'tesoura') or (jogador == 'papel' and maquina == 'pedra') or (jogador == 'tesoura' and maquina == 'papel'):
+        jogador_pontos += 1
+        print(f"✧˖°. voce ganhouuuu 1 ponto ( ˶˘ ³˘)♡. total --> {jogador_pontos}")
+        print(" ")
     else:
-        maquina = maquina_pontos =+ 1
-        print(f"a maquina ganhouuuu. total dela --> {maquina}")
-    if jogador_pontos < 3 and maquina_pontos < 3 
-        continue
+        maquina_pontos += 1
+        print(f"⟡ ݁₊ . a maquina ganhouuuu. total dela --> {maquina_pontos}")
+        print(" ")
+
+    if jogador_pontos == 3:
+        print(f"o jogador ganhou com {jogador_pontos} pontos, parabensss ✧｡٩(ˊᗜˋ )و✧*｡")
+        break
+    if maquina_pontos == 3:
+        print(f"a maquina ganhou com {maquina_pontos} pontos, bem feito (¬_¬)")
+        break
